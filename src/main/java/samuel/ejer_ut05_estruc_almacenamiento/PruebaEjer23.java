@@ -23,14 +23,14 @@ public class PruebaEjer23 {
         int numero = escaner.nextInt();
         Ejer23 indice1 = new Ejer23(numero);
         indice1.ImprimirLista();
-        indice1.ImprimirSumaPares();
-        indice1.ImprimirImpares();
-        indice1.NumeroMayor();
-        indice1.NumeroMenor();
-        indice1.Tamano();
-        indice1.BorradoPosicion();
+//        indice1.ImprimirSumaPares();
+//        indice1.ImprimirImpares();
+//        indice1.NumeroMayor();
+//        indice1.NumeroMenor();
+//        indice1.Tamano();
+//        indice1.BorradoPosicion();
         indice1.BorradoValor();
-        indice1.Modificar();
+//        indice1.Modificar();
     }
 
 }

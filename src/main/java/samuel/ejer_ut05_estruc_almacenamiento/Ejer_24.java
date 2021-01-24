@@ -21,7 +21,7 @@ public class Ejer_24 {
         int enteroAleatorio01;
         int enteroAleatorio02;
         int enteroAleatorio03 = random.nextInt(15 - 5 + 1) + 5;
-//            int enteroAleatorio03 = random.nextInt(5 - 2 + 1) + 2;
+
         enteroAleatorio02 = random.nextInt(20 - 10 + 1) + 10;
         for (int i = 0; i <= enteroAleatorio03; i++) {
             enteroAleatorio01 = random.nextInt(100 - 50 + 1) + 50;
@@ -31,15 +31,15 @@ public class Ejer_24 {
             enteroAleatorio01 = random.nextInt(100 - 50 + 1) + 50;
             lista2.add(enteroAleatorio01);
         }
-//        enteroAleatorio02 = random.nextInt(5 - 2 + 1) + 2;
-//        for (int i = 0; i <= enteroAleatorio03; i++) {
-//            enteroAleatorio01 = random.nextInt(5 - 2 + 1) + 2;;
+//        for (int i = 0; i <= 4; i++) {
+//            enteroAleatorio01 = random.nextInt(2 - 1 + 1) + 1;
 //            lista1.add(enteroAleatorio01);
 //        }
-//        for (int i = 0; i <= enteroAleatorio02; i++) {
-//            enteroAleatorio01 = random.nextInt(5 - 2 + 1) + 2;;
+//        for (int i = 0; i <= 40; i++) {
+//            enteroAleatorio01 = random.nextInt(2 - 1 + 1) + 1;
 //            lista2.add(enteroAleatorio01);
 //        }
+
         System.out.println("Lista 1: ");
         for (Integer tmp1 : lista1) {
             System.out.println(tmp1);
@@ -56,9 +56,19 @@ public class Ejer_24 {
             lista3.add(tmp);
         }
         for (int i = 0; i < lista3.size(); i++) {
+            if (lista3.size() == 0) {
+                break;
+            }
             for (int n = 0; n < lista2.size(); n++) {
+                if (lista3.size() == 0) {
+                    break;
+                }
+
                 if (lista3.get(i) == lista2.get(n)) {
                     lista3.remove(lista3.get(i));
+                    if (i != 0) {
+                        i--;
+                    }
                 }
             }
 

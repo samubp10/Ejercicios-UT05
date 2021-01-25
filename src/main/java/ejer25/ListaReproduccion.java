@@ -5,49 +5,74 @@
  */
 package ejer25;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
 /**
  *
  * @author Samuel
  */
 public class ListaReproduccion {
-    Cancion canciones;
+
+    private ArrayList<Cancion> canciones;
 
     public ListaReproduccion() {
+        this.canciones = new ArrayList<>();
     }
-    
-    public int numeroCanciones(){
-        
-        return;
+
+    public int numeroCanciones() {
+
+        return canciones.size();
     }
-    
-    public boolean estaVacia(){
-        return;
+
+    public boolean estaVacia() {
+
+        return canciones.isEmpty();
     }
-    
-    public int escucharCancion(){
-        return;
+
+    public Cancion escucharCancion(int posi) {
+        if (posi >= 0 && posi < canciones.size()) {
+            return canciones.get(posi);
+        }
+        return canciones.get(canciones.size() - 1);
+
     }
-    
-    public int cambiarCancion(int Cancion){
-        return;
+
+    public void cambiarCancion(int num, Cancion cancion) {
+        if (num >= 0 && num < canciones.size()) {
+            canciones.set(num, cancion);
+        }
+
     }
-    
-    public void grabarCancion(Cancion){
-        
+
+    public void grabarCancion(Cancion cancion) {
+        canciones.add(cancion);
     }
-    
-    public void eliminaCancion(int h){
-        
+
+    public void eliminaCancion(int posicionBorrar) {
+        canciones.remove(posicionBorrar);
     }
-    
-    public static imprimirLista(ListaReproduccion tmp){
-        
-        return;
+
+    public void eliminaCancion(Cancion cancionBorrar) {
+        canciones.remove(cancionBorrar);
     }
-    
-    public int buscarCancion(Cancion c){
-        
+
+    public void imprimirLista(ListaReproduccion tmp) {
+        for (int i = 0; i < tmp.numeroCanciones(); i++) {
+            System.out.println(tmp.canciones.get(i).getNombre());
+        }
+
     }
-    
-    
+
+    public int buscarCancion(Cancion c) {
+
+        return canciones.indexOf(c);
+    }
+
+    public void ordenarTitulo() {
+        Comparator<Cancion> criterio = (c1, c2) -> c1.getNombre().compareTo(c2.getNombre());
+        Collections.sort(canciones, criterio);
+    }
+
 }

@@ -26,15 +26,14 @@ public class ListaPrueba {
         System.out.println("Número de canciones" + lista.numeroCanciones());
         System.out.println("¿Está vacia?" + lista.estaVacia());
         Cancion escuchar = lista.escucharCancion(1);
-        System.out.println("Escuchando..."+escuchar);
+        System.out.println("Escuchando..." + escuchar);
         lista.eliminaCancion(0);
         lista.imprimirLista(lista);
         lista.grabarCancion(new Cancion("lucid dreams", 10));
         lista.imprimirLista(lista);
         Cancion buscar = new Cancion("lucid dreams", 10);
         System.out.println(lista.buscarCancion(buscar));
-        
 
     }
-    
+
 }

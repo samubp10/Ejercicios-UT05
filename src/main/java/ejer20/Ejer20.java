@@ -34,5 +34,17 @@ public class Ejer20 {
         this.asientos = asientos;
     }
     
+    public void ReservarAsiento(int fila, int columna) {
+        
+            System.out.println("Su asiento en la fila "+fila+ " y en la columna "+columna+" ha sido reservada");
+            asientos[fila][columna]=true;
+        
+    }
 
+    public void CancelarReserva(int fila, int columna) {
+        
+            System.out.println("su reserva del asiento en la fila "+fila+ " y en la columna "+columna+" ha sido cancelado");
+            asientos[fila][columna]=false;
+        
+    }
 }
